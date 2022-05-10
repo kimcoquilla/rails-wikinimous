@@ -1,8 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
 <h1><%= @article.title %></h1>
-
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
-
 <p><%= link_to 'Edit Article', edit_article_path(@article) %></p>
 <p><%= link_to 'Delete Article', article_path(@article), method: :delete %></p>
 <p><%= link_to 'Article List', articles_path%></p>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+      </div>
+    </div>
+  </div

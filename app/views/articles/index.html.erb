@@ -1,9 +1,18 @@
-<h1>Wikinimous</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <h1>Wikinimous</h1>
+    <%= link_to 'Add an Article', new_article_path %>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
 <ul>
 <% @articles.each do |article| %>
 <li><h2><%= link_to article.title, article_path(article) %></h2>
 <%= article.content %></li>
 <% end %>
 </ul>
-
-<%= link_to 'Add an Article', new_article_path %>
+      </div>
+    </div>
+  </div
